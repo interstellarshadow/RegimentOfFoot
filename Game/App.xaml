@@ -4,6 +4,18 @@
              xmlns:local="clr-namespace:RegimentOfFoot.Game"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Storyboard x:Key="ExpandStoryboard">
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" 
+        To="2" Duration="0:0:0.2" />
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" 
+        To="2" Duration="0:0:0.2" />
+        </Storyboard>
+        <!-- This storyboard will make the image revert to its original size -->
+        <Storyboard x:Key="ShrinkStoryboard">
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" 
+        To="1" Duration="0:0:0.2" />
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" 
+        To="1" Duration="0:0:0.2" />
+        </Storyboard>
     </Application.Resources>
 </Application>
