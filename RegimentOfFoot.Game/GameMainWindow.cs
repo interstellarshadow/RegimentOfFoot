@@ -7,7 +7,7 @@ namespace RegimentOfFoot.Game
     {
         #region Private Control Members
 
-        private Frame windowFrame;
+        //private Frame windowFrame;
 
         #endregion
 
@@ -21,8 +21,10 @@ namespace RegimentOfFoot.Game
 
         private void InitializeComponents()
         {
-            windowFrame = new MainScreen();
-            Content = windowFrame;
+            FrameSwitcher.InitializeFrames();
+            FrameSwitcher.Window = this;
+            Xwt.Application.Invoke(() => 
+                FrameSwitcher.SwitchFrame("MainScreen", new MainScreen()));
 
         }
 

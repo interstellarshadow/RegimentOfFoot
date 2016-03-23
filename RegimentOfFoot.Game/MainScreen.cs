@@ -51,6 +51,8 @@ namespace RegimentOfFoot.Game
 
         private void InitializeComponents()
         {
+            HeightRequest = 300;
+            WidthRequest = 400;
             Content = container;
             container.PackEnd(exitButton);
             container.PackEnd(characterPoolButton);
@@ -70,7 +72,7 @@ namespace RegimentOfFoot.Game
 
         void ExitPressed(object sender, ButtonEventArgs e)
         {
-            Xwt.Application.Exit();
+            FrameSwitcher.Window.Close();
         }
     }
 }
