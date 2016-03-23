@@ -21,10 +21,7 @@ namespace RegimentOfFoot.Game
 
         private void InitializeComponents()
         {
-            windowFrame = new Frame()
-            {
-                BackgroundColor = new Xwt.Drawing.Color(.886, .886, .886)
-            };
+            windowFrame = new MainScreen();
             Content = windowFrame;
 
         }
