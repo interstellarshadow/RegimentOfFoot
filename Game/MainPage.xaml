@@ -1,0 +1,20 @@
+﻿<Page x:Class="RegimentOfFoot.Game.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RegimentOfFoot.Game"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="MainPage">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <local:DecisionControl Text="Begin Game" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,20,10,0" Height="30" Width="128"/>
+            <local:DecisionControl Text="Load Game" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,20,10,0" Height="30" Width="128"/>
+            <local:DecisionControl Text="Character Pool" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,20,10,0" Height="30" Width="128"/>
+            <local:DecisionControl Text="Settings" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,20,10,0" Height="30" Width="128"/>
+            <local:DecisionControl x:Name="QuitButton" Text="Quit To Desktop" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,20" Height="30" Width="128" Click="QuitButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

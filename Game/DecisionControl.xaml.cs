@@ -15,12 +15,12 @@ using System.Windows.Media.TextFormatting;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Game
+namespace RegimentOfFoot.Game
 {
     /// <summary>
     /// Interaction logic for DecisionControl.xaml
     /// </summary>
-    public partial class DecisionControl : UserControl, INotifyPropertyChanged
+    public partial class DecisionControl : Button, INotifyPropertyChanged
     {
         private string _text="DefaultText";
 

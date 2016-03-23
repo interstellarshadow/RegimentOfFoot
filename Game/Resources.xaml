@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Game">
+                    xmlns:local="clr-namespace:RegimentOfFoot.Game">
     <!-- This storyboard will make the image grow to double its size in 0.2 seconds -->
     
 </ResourceDictionary>
