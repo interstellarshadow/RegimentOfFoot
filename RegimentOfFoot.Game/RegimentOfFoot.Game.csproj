@@ -45,5 +45,8 @@
     <Compile Include="MainScreen.cs" />
     <Compile Include="Colors.cs" />
     <Compile Include="FrameSwitcher.cs" />
+    <Compile Include="SettingsScreen.cs" />
+    <Compile Include="CharacterPoolScreen.cs" />
+    <Compile Include="NewGameScreen.cs" />
   </ItemGroup>
 </Project>

@@ -28,22 +28,30 @@ namespace RegimentOfFoot.Game
             initialized = true;
         }
 
-        public static void SwitchFrame(string key, Frame frame, bool fwd_back_nav = false)
+        public static void SwitchFrame(string key, Frame frame,
+                                       bool fwd_back_nav = false)
         {
             if (!initialized)
             {
                 throw new NullReferenceException("Switcher not initialized");
             }
-            if (frame != null)
+            if (frame != null && !Contains(key))
             {
                 Frames.Add(key, frame);
             }
+            //Console.WriteLine("(Pre) Current: {0}, Key: {1}", current, key);
             Window.Content = Frames[key];
-            Window.Size = frame.Size;
+            //Window.Size = frame.Size;
             //Xwt.Application.Invoke(() => Window.Content = Frames[key]);
             if (!fwd_back_nav)
+            {
                 history.Push(current);
+                future = new Stack<string>();
+            }
             current = key;
+            //Console.WriteLine("(Post) Current: {0}, Key: {1}", current, key);
+            //Console.WriteLine("(Post) HistTop: {0}, FutTop: {1}",
+            //    history.Peek(), (future.Count == 0) ? null : future.Peek());
         }
 
         public static void SwitchFrame(string key, bool fwd_back_nav = false)
@@ -84,6 +92,11 @@ namespace RegimentOfFoot.Game
             }
             SwitchFrame(temp_curr, true);
             
+        }
+
+        public static bool Contains(string key)
+        {
+            return Frames.ContainsKey(key);
         }
     }
 }

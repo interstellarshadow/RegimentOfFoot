@@ -61,6 +61,8 @@ namespace RegimentOfFoot.Game
             container.PackEnd(startGameButton);
 
             exitButton.ButtonPressed += ExitPressed;
+            characterPoolButton.ButtonPressed += CharacterPoolButton_ButtonPressed;
+            settingsButton.ButtonPressed += SettingsButton_ButtonPressed;
 
 
             if (false) //If a game is ready to continue
@@ -68,6 +70,18 @@ namespace RegimentOfFoot.Game
                 container.PackStart(continueGameButton);
             }
 
+        }
+
+        void CharacterPoolButton_ButtonPressed(object sender, ButtonEventArgs e)
+        {
+            CharacterPoolScreen screen = new CharacterPoolScreen();
+            FrameSwitcher.SwitchFrame(screen.GetType().ToString(), screen);
+        }
+
+        void SettingsButton_ButtonPressed(object sender, ButtonEventArgs e)
+        {
+            SettingsScreen screen = new SettingsScreen();
+            FrameSwitcher.SwitchFrame(screen.GetType().ToString(), screen);
         }
 
         void ExitPressed(object sender, ButtonEventArgs e)
