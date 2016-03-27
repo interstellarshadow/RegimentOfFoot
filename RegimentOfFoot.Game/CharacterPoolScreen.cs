@@ -29,7 +29,7 @@ namespace RegimentOfFoot.Game
             pane.Panel1.Content = leftContainer;
             pane.Panel2.Content = rightContainer;
             rightContainer.PackEnd(backButton);
-
+            leftChild.PackEnd(new Label("Character Pool Not Supported Yet"));
             backButton.ButtonPressed += BackButton_ButtonPressed;
             pane.Position = 200;
         }

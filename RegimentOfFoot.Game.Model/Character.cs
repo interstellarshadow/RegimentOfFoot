@@ -1,11 +1,23 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Dynamic;
+using Newtonsoft.Json;
+using System.Runtime.Serialization;
+
 
 namespace RegimentOfFoot.Game.Model
 {
-    public class Character : INotifyPropertyChanged
+    public class Character : INotifyPropertyChanged, ISerializable
     {
+        #region ISerializable implementation
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
         #region INotifyPropertyChanged implementation
 
         public event PropertyChangedEventHandler PropertyChanged;

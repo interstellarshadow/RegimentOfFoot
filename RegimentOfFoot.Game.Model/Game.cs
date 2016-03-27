@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Xml;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace RegimentOfFoot.Game.Model
 {
@@ -17,21 +18,13 @@ namespace RegimentOfFoot.Game.Model
 
         public static void SaveGame(Game game)
         {
-            var saver = new XmlDocument();
+            //Newtonsoft.Json.
 
         }
 
         public static Game LoadGame(string filename)
         {
-            var loader = new XmlDocument();
-            loader.Load(filename);
-
-            Game game = new Game();
-            XmlNode gameName = loader.GetElementsByTagName("GameName")?.Item(0);
-            if (gameName == null)
-                throw new XmlException("XML doesn't follow correct form");
-
-            game.Name = gameName.InnerText;
+            
 
         }
     }

@@ -63,6 +63,7 @@ namespace RegimentOfFoot.Game
             exitButton.ButtonPressed += ExitPressed;
             characterPoolButton.ButtonPressed += CharacterPoolButton_ButtonPressed;
             settingsButton.ButtonPressed += SettingsButton_ButtonPressed;
+            startGameButton.ButtonPressed += StartGameButton_ButtonPressed;
 
 
             if (false) //If a game is ready to continue
@@ -70,6 +71,12 @@ namespace RegimentOfFoot.Game
                 container.PackStart(continueGameButton);
             }
 
+        }
+
+        void StartGameButton_ButtonPressed(object sender, ButtonEventArgs e)
+        {
+            NewGameScreen screen = new NewGameScreen();
+            FrameSwitcher.SwitchFrame(screen.GetType().ToString(), screen);
         }
 
         void CharacterPoolButton_ButtonPressed(object sender, ButtonEventArgs e)
